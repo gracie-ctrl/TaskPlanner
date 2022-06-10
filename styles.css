@@ -1,0 +1,61 @@
+
+.jumbotron {
+    background-image: url(https://wallpaperaccess.com/full/2906429.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    position: center;
+    color: #111;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 1 1 21rem;
+    flex-direction: column;
+    background: #f5f5f5;
+    margin-right: 10px 20px;
+    align-self: normal;
+    padding: 10px 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.card .btn {
+    display: inline-block;
+    margin-top: auto;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    color: #fff;
+}
+
+/*bg {
+    background-image: url('/project_Task_Planner/sprint1/resources/img_bg_blue\ pink_wallpapersaferi.jpg');
+    height: 620px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+/* Pseudo code to make bg opacity
+&::before {
+    content: '';
+    position: relative;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url('/project_Task_Planner/sprint1/resources/img_bg_blue\ pink_wallpapersaferi.jpg');
+    background-size: cover;
+    background-position: top center;
+    opacity: 0.5;
+} */
+

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- added style maxcdn from Hari's code 20220608 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+
+    <title>Task Planner</title>
+  </head>
+  <body>
+    <!-- Background jumbotron START -->
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<h1>Task List View</h1>
+			<p>Welcome to the team's Task Master site where all tasks are listed here</p>
+			<!-- Add New Task button trigger modal -->
+			<button type="button" class="btn btn-dark btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Add New Task</button>
+			
+			<!-- <p><a href="#" class="btn btn-dark btn-lg" role="button">Add New Task</a></p> 
+			-->
+		</div>
+	</div>
+	<!-- Background jumbotron END -->
+
+	
+	<!-- Add New Task Form // START -->
+		<!-- code to include new task input and use names/ids for labels and input boxes -->
+		<!-- must have the following elements
+			Heading 'Add Task'
+			Name textbox
+			Description textarea
+			AssignedTo textbox
+			DueDate textbox/datepicker [dd/mm/yyyy]
+			Status dropdown select - To Do, In Progress, Review, Done
+			Submit button
+			Reset button
+		 -->	
+	<div class="container">
+		 <div class="row">
+			<div class="col-sm-6">
+			<!-- Card 1 -->
+			  <div class="card">
+				<div class="card-body">
+				  <h5 class="card-title">Task Name 1</h5>
+				  <p class="card-text">Description of the task details goes here.</p>
+				  <!-- add -->
+				  <!-- assignee-->
+				  <!-- date -->
+				  <!-- status -->
+
+				  <a href="#" class="btn btn-sm">Delete</a>
+				  <a href="#" class="btn btn-sm">Edit</a>
+				</div>
+			  </div>
+			</div>
+			<div class="col-sm-6">
+			<!-- Card 1 -->
+			  <div class="card">
+				<div class="card-body">
+				  <h5 class="card-title">Task Name 2</h5>
+				  <p class="card-text">Description of the task details goes here.</p>
+				  <a href="#" class="btn btn-sm">Delete</a>
+				  <a href="#" class="btn btn-sm">Edit</a>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	<!-- Add New Task Form // END -->
+
+	<!-- Add Task button START -->
+		<!-- use Bootstrap buttons, forms, modals -->
+	<!-- Add Task button END -->
+		
+	<!-- Task Card Layout START -->
+		 <!-- each card must display: name, description, assignee, date, status -->
+		 <!-- each card must have 'edit' and 'delete' buttons -->
+		 <!-- 'edit' button must link and open 'Edit form' modal -->
+		 <!-- 'delete' button deletes task'-->
+		 <!-- 'Add New Task' button on the page must open 'Add New Task form'-->
+	<!-- Task Card Layout END -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<!-- added scripts ajax and maxcdn from Hari's code 20220608 -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
