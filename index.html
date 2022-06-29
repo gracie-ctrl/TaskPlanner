@@ -18,7 +18,8 @@
 			<h1>Task List View</h1>
 			<p>Welcome to the team's Task Master site where all tasks are listed here</p>
 			<!-- Add New Task button trigger modal -->
-			<button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-target="#taskModal">Add New Task</button>
+			<button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-target="#taskModal">Add New Task</button><br><br>
+			<span id="currentDate"></span>
 		</div>
 	</div>
 	<!--Background jumbotron END -->
@@ -40,13 +41,16 @@
 						<form role="form" action="/button-type" id="newTaskForm" method="GET">
 							<!-- Name -->
 							<div class="form-group">
+								
 								<label for="taskName" class="col-sm-6" col-form-label>Task Name</label>
 								<span><input type="text" name="taskName" id="taskName" class="form-control" placeholder="Task Name e.g. XYZ: Sprint 1"></span>
+								<label id="errMsgName"></label>
 							</div>
 							<!-- Description -->
 							<div class="form-group">
 								<label for="taskDescription" class="col-sm-6 col-form-label">Description</label>
 								<textarea name="taskDescription" id="taskDescription" class="form-control" height="340px" rows="6" placeholder="enter task description details here"></textarea>
+								<label id="errMsgDescription"></label>
 								<br>
 							</div>
 							<!-- Assignee -->
@@ -57,28 +61,31 @@
 									<option value="Hari">Hari</option>
 									<option value="Navleen">Navleen</option>
 									<option value="Gracie">Gracie</option>
-									<option value="Gohar">Gohar</option>
-									<option value="Susana">Susana</option>
 									<option value="tbd">...</option>
 								</datalist>
+								<label id="errMsgAssignee"></label>
 								<br>
 							</div>
 							<!-- Date -->
 							<div class="form-group">
 								<label for="taskDueDate" class="col-sm-6 col-form-label">Due Date</label>
-								<input type="date" class="form-control" id="taskDueDate" placeholder="select task due date">
+								<input type="date" class="form-control" id="taskDueDate" placeholder="select task due date" min="2022-06-29" max="2030-12-31">
+								<label id="errMsgDueDate"></label>
+								
 								<br>
 							</div>
 							<!-- Status -->
 							<div class="form-group">
 								<label for="taskStatus" class="col-sm-6 col-form-label">Status</label>
 								<!-- Changed datalist to select from drop down list // Hari's code modifications -->
-								<select name="taskStatus" id="taskStatus">
+								<select name="taskStatus" id="taskStatus" placeholder="Task Status">
+									<option value=""></option>
 									<option value="To Do">To Do</option>
 									<option value="In Progress">In Progress</option>
 									<option value="Review">Review</option>
 									<option value="Done">Done</option>
 								</select>
+								<label id="errMsgStatus"></label>
 							</div>
 						</form>
 					</div>
@@ -103,9 +110,9 @@
 		<!-- 'delete' button deletes task'-->
 		<!-- 'Add New Task' button on the page must open 'Add New Task form'-->
 	<div class="container">
-		<div class="row">
+		<div class="row" id="taskList">
 			<!-- Card 1 -->
-			<div class="col-sm-6">
+			<!-- <div class="col-sm-6">
 				<div class="card">
 					<div class="card-body">
 						<h5 class="card-title">Task Name 1</h5>
@@ -121,10 +128,10 @@
 						<small class="text-muted">Last updated 1 day ago</small>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			
 			<!-- Card 2 -->
-			<div class="col-sm-6">
+			<!-- <div class="col-sm-6">
 				<div class="card">
 					<div class="card-body">
 						<h5 class="card-title">Task Name 2</h5>
@@ -140,10 +147,10 @@
 						<small class="text-muted">Last updated 1 day ago</small>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			
 			<!-- Card 3 -->
-			<div class="col-sm-6">
+			<!-- <div class="col-sm-6">
 				<div class="card">
 					<div class="card-body">
 						<h5 class="card-title">Task Name 3</h5>
@@ -159,10 +166,10 @@
 						<small class="text-muted">Last updated 1 day ago</small>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 			<!-- Card 4 -->
-			<div class="col-sm-6">
+			<!-- <div class="col-sm-6">
 				<div class="card">
 					<div class="card-body">
 						<h5 class="card-title">Task Name 4</h5>
@@ -178,10 +185,10 @@
 						<small class="text-muted">Last updated 1 day ago</small>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 			<!-- Card 5 -->
-			<div class="col-sm-6">
+			<!-- <div class="col-sm-6">
 				<div class="card">
 					<div class="card-body">
 						<h5 class="card-title">Task Name 5</h5>
@@ -197,7 +204,7 @@
 						<small class="text-muted">Last updated 1 day ago</small>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			
 		</div>
 	</div>
@@ -226,5 +233,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+	<script src="task.js"></script>
+	<script src="index.js"></script>
+	<script src="validation.js"></script>
+</body>
 </html>
